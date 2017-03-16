@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "experimentalDecorators": true
+  },
+  "include": [
+    "sources/**/*.ts",
+    "typings/references.d.ts"
+  ],
+  "exclude": [
+    ".tmp",
+    "dist",
+    "node_modules"
+  ]
+}

@@ -1,0 +1,11 @@
+# Global
+.idea/
+logs/
+
+# Modules
+node_modules/
+
+# Builds
+dist/
+.tmp/
+.tmpTests/
