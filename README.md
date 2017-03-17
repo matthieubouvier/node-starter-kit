@@ -1,2 +1,2 @@
-# Camel
-Camel web server and data extraction manager
+# Node starter kit
+Node REST server with log and error management.
