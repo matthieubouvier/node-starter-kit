@@ -13,7 +13,10 @@ var ownIstanbulTool = require('./coverage-tools/istanbul-hook');
 
 var $ = require('gulp-load-plugins')();
 
-var newman = require('newman'); // require newman in your project 
+/*
+TODO: manage API unit tests
+var newman = require('newman'); // require newman in your project
+*/
 
 /*
  * List all test files
@@ -205,6 +208,8 @@ gulp.task('test:simple', ['test:run'], function() {
 /*
  * Run API tests
  */
+/*
+ TODO: manage API unit tests
 gulp.task('test:api', function () {
     // call newman.run to pass `options` object and wait for callback 
     newman.run({
@@ -215,3 +220,4 @@ gulp.task('test:api', function () {
         console.log('collection run complete!');
     });
 });
+    */
