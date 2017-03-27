@@ -19,9 +19,7 @@ describe('Test REST service should', function() {
     // Service tested
     var testTestRestModule;
     // Mocks
-    var mockWinston;
     var mockExpress;
-    var mockLoginService;
     // Declared routes
     var declaredRoutes: any;
 
@@ -30,7 +28,7 @@ describe('Test REST service should', function() {
      */
     beforeEach(function() {
         declaredRoutes = {};
-        mockWinston = new GenericMock();
+        mockExpress = ExpressMock.getExpressMockGeneric(declaredRoutes);
         testTestRestModule = LoadModule.loadModule('./modules/web-services/test/test.rest.service.js',
             {
                 'express': mockExpress
@@ -55,9 +53,27 @@ describe('Test REST service should', function() {
         expect(declaredRoutes[routeToFind]).toBe(routeToFind);
     });
 
-    it('have only one declared route', function() {
+    it('initialize route to post Tests list', function() {
         // Assert
-        expect(Object.keys(declaredRoutes).length).toBe(1);
+        var routeToFind = ExpressMock.routeToString('post');
+        expect(declaredRoutes[routeToFind]).toBe(routeToFind);
+    });
+
+    it('initialize route to put Tests list', function() {
+        // Assert
+        var routeToFind = ExpressMock.routeToString('put');
+        expect(declaredRoutes[routeToFind]).toBe(routeToFind);
+    });
+
+    it('initialize route to delete Tests list', function() {
+        // Assert
+        var routeToFind = ExpressMock.routeToString('delete');
+        expect(declaredRoutes[routeToFind]).toBe(routeToFind);
+    });
+
+    it('have only four declared route', function() {
+        // Assert
+        expect(Object.keys(declaredRoutes).length).toBe(4);
     });
 
 });
